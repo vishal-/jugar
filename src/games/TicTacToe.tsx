@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Header from '../components/common/Header'
 
 function TicTacToe() {
   const [board, setBoard] = useState(Array(9).fill(null))
@@ -20,7 +21,9 @@ function TicTacToe() {
   }
 
   return (
-    <div className="min-h-screen p-4 max-w-md mx-auto">
+    <>
+      <Header />
+      <div className="min-h-screen p-4 max-w-md mx-auto">
       <h1 className="text-2xl font-bold mb-4 text-center">Tic Tac Toe</h1>
       <div className="text-xl text-center mb-4">
         {winner ? `Winner: ${winner}` : `Next: ${isX ? 'X' : 'O'}`}
@@ -39,7 +42,8 @@ function TicTacToe() {
       <button onClick={reset} className="w-full py-3 bg-gray-700 hover:bg-gray-600 rounded-lg font-semibold">
         Reset
       </button>
-    </div>
+      </div>
+    </>
   )
 }
 

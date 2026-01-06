@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Header from '../components/common/Header'
 
 function Tambola() {
   const [calledNumbers, setCalledNumbers] = useState<number[]>([])
@@ -20,7 +21,9 @@ function Tambola() {
   }
 
   return (
-    <div className="min-h-screen p-4 max-w-md mx-auto">
+    <>
+      <Header />
+      <div className="min-h-screen p-4 max-w-md mx-auto">
       <h1 className="text-2xl font-bold mb-4 text-center">Tambola</h1>
       
       <div className="bg-gray-800 rounded-lg p-6 mb-4 text-center">
@@ -62,7 +65,8 @@ function Tambola() {
           </div>
         ))}
       </div>
-    </div>
+      </div>
+    </>
   )
 }
 
