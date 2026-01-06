@@ -20,23 +20,23 @@ function TicTacToe() {
   }
 
   return (
-    <div className="flex flex-col items-center gap-4 p-8">
-      <h1 className="text-3xl font-bold">Tic Tac Toe</h1>
-      <div className="text-xl">
+    <div className="min-h-screen p-4 max-w-md mx-auto">
+      <h1 className="text-2xl font-bold mb-4 text-center">Tic Tac Toe</h1>
+      <div className="text-xl text-center mb-4">
         {winner ? `Winner: ${winner}` : `Next: ${isX ? 'X' : 'O'}`}
       </div>
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-3 gap-2 mb-4">
         {board.map((cell, i) => (
           <button
             key={i}
             onClick={() => handleClick(i)}
-            className="w-20 h-20 bg-sky-blue text-3xl font-bold border-2 border-sky-blue-700 hover:bg-sky-blue-300"
+            className="aspect-square bg-gray-800 text-4xl font-bold border-2 border-gray-700 hover:bg-gray-700 rounded-lg"
           >
             {cell}
           </button>
         ))}
       </div>
-      <button onClick={reset} className="px-4 py-2 bg-thistle hover:bg-thistle-400 rounded">
+      <button onClick={reset} className="w-full py-3 bg-gray-700 hover:bg-gray-600 rounded-lg font-semibold">
         Reset
       </button>
     </div>
