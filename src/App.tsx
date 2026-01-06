@@ -1,6 +1,7 @@
 import { createHashRouter, RouterProvider } from "react-router";
 import Homepage from "./pages/Homepage";
 import TicTacToe from "./games/TicTacToe";
+import Tambola from "./games/Tambola";
 
 const router = createHashRouter([
   {
@@ -10,6 +11,10 @@ const router = createHashRouter([
   {
     path: "/tic-tac-toe",
     element: <TicTacToe />
+  },
+  {
+    path: "/tambola",
+    element: <Tambola />
   }
 ]);
 
